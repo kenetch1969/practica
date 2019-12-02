@@ -212,6 +212,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pd-ra-you">
+                                <rect key="frame" x="65" y="554" width="283" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rUf-n7-LF3"/>
@@ -222,6 +226,7 @@
                         <outlet property="favoritoButton" destination="apU-mJ-Yro" id="c1p-95-V7F"/>
                         <outlet property="generoTextField" destination="k01-YT-lyJ" id="urd-LR-hvI"/>
                         <outlet property="imageTextField" destination="Utc-cw-xYq" id="CJV-uu-0JQ"/>
+                        <outlet property="showImageView" destination="8Pd-ra-you" id="lQ9-VF-voB"/>
                         <outlet property="tituloTextField" destination="WNu-Xh-r7h" id="GDs-Gz-sKq"/>
                     </connections>
                 </viewController>

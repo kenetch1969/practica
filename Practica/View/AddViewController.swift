@@ -16,6 +16,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var anioTextField: UITextField!
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var favoritoButton: UIButton!
+    @IBOutlet weak var showImageView: UIImageView!
     
     
     var controller: AddController?
@@ -48,6 +49,17 @@ class AddViewController: UIViewController {
         tag.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tag)
         
+        setImage()
+    }
+    
+    private func setImage() {
+        guard let link = imageTextField.text, let url = URL(string: link) else { return }
+        do {
+        let data = try Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            showImageView.image = UIImage(data: data)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func dismissKey() {
