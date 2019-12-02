@@ -16,6 +16,13 @@
 		4226A39823933844009A362F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4226A39623933844009A362F /* LaunchScreen.storyboard */; };
 		4226A3A323933844009A362F /* PracticaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3A223933844009A362F /* PracticaTests.swift */; };
 		4226A3AE23933844009A362F /* PracticaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3AD23933844009A362F /* PracticaUITests.swift */; };
+		4226A3BF239338FD009A362F /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3BE239338FD009A362F /* Persistencia.swift */; };
+		4226A3C323933E1D009A362F /* ShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3C223933E1D009A362F /* ShowController.swift */; };
+		4226A3C5239342A2009A362F /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3C4239342A2009A362F /* AddController.swift */; };
+		4226A3C723934518009A362F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3C623934518009A362F /* AddViewController.swift */; };
+		4226A3C923934534009A362F /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3C823934534009A362F /* ShowTableViewController.swift */; };
+		4226A3CC2393597F009A362F /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3CB2393597F009A362F /* UIImageView+extension.swift */; };
+		4226A3CE23935DC7009A362F /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226A3CD23935DC7009A362F /* UIViewController+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		4226A3A923933844009A362F /* PracticaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4226A3AD23933844009A362F /* PracticaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaUITests.swift; sourceTree = "<group>"; };
 		4226A3AF23933844009A362F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4226A3BE239338FD009A362F /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
+		4226A3C223933E1D009A362F /* ShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowController.swift; sourceTree = "<group>"; };
+		4226A3C4239342A2009A362F /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
+		4226A3C623934518009A362F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		4226A3C823934534009A362F /* ShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
+		4226A3CB2393597F009A362F /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		4226A3CD23935DC7009A362F /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,10 @@
 		4226A38723933840009A362F /* Practica */ = {
 			isa = PBXGroup;
 			children = (
+				4226A3CA239348AB009A362F /* extension */,
+				4226A3BD239338C7009A362F /* View */,
+				4226A3BC239338BC009A362F /* Controller */,
+				4226A3BB239338AC009A362F /* Model */,
 				4226A38823933840009A362F /* AppDelegate.swift */,
 				4226A38A23933840009A362F /* SceneDelegate.swift */,
 				4226A38C23933840009A362F /* ViewController.swift */,
@@ -129,6 +147,41 @@
 				4226A3AF23933844009A362F /* Info.plist */,
 			);
 			path = PracticaUITests;
+			sourceTree = "<group>";
+		};
+		4226A3BB239338AC009A362F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4226A3BE239338FD009A362F /* Persistencia.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4226A3BC239338BC009A362F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4226A3C223933E1D009A362F /* ShowController.swift */,
+				4226A3C4239342A2009A362F /* AddController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4226A3BD239338C7009A362F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4226A3C623934518009A362F /* AddViewController.swift */,
+				4226A3C823934534009A362F /* ShowTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4226A3CA239348AB009A362F /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				4226A3CB2393597F009A362F /* UIImageView+extension.swift */,
+				4226A3CD23935DC7009A362F /* UIViewController+extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +315,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4226A3CC2393597F009A362F /* UIImageView+extension.swift in Sources */,
+				4226A3C323933E1D009A362F /* ShowController.swift in Sources */,
 				4226A39323933840009A362F /* Practica.xcdatamodeld in Sources */,
+				4226A3C723934518009A362F /* AddViewController.swift in Sources */,
+				4226A3CE23935DC7009A362F /* UIViewController+extension.swift in Sources */,
+				4226A3C923934534009A362F /* ShowTableViewController.swift in Sources */,
 				4226A38D23933840009A362F /* ViewController.swift in Sources */,
 				4226A38923933840009A362F /* AppDelegate.swift in Sources */,
 				4226A38B23933840009A362F /* SceneDelegate.swift in Sources */,
+				4226A3C5239342A2009A362F /* AddController.swift in Sources */,
+				4226A3BF239338FD009A362F /* Persistencia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
