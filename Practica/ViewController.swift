@@ -10,12 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var networkSegment: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Menu"
         
         // Do any additional setup after loading the view.
+        
+        self.networkSegment.selectedSegmentIndex = -1
+    }
+    
+    
+    @IBAction func selectedSegmented(_ sender: UISegmentedControl) {
+        let network = NetWorking()
+        switch sender.selectedSegmentIndex {
+        case 0:
+            network.URLSessionGet()
+        case 1:
+            network.URLSessionPost()
+        default:
+            network.URLSessionPostParameter()
+        }
     }
     
     
