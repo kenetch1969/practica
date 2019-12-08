@@ -32,10 +32,10 @@ class AddViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
         //self.navigationController?.navigationBar.topItem?.title = "Cancel"
-         let backButton = UIBarButtonItem()
-         backButton.title = ""
-         backButton.tintColor = .black
-         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        backButton.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
       
         // Do any additional setup after loading the view.
