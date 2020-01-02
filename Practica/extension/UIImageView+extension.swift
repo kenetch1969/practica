@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+
+//            let url = URL(string: heroe.photo)
+//            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+//            photoImageView.image = UIImage(data: data!)
 extension UIImageView {
     
     func downloadImageFromServer(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {

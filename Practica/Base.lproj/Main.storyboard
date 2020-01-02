@@ -38,12 +38,13 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-3H-U0B">
-                                <rect key="frame" x="103" y="606" width="209" height="32"/>
+                                <rect key="frame" x="48" y="606" width="319" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Get"/>
                                     <segment title="Post"/>
                                     <segment title="Request"/>
+                                    <segment title="Navigator"/>
                                 </segments>
                                 <connections>
                                     <action selector="selectedSegmented:" destination="BYZ-38-t0r" eventType="valueChanged" id="kWX-6M-Hsl"/>
@@ -56,6 +57,7 @@
                     <navigationItem key="navigationItem" id="8Yd-oI-9PP"/>
                     <connections>
                         <outlet property="networkSegment" destination="1RV-3H-U0B" id="a5n-Ja-hEQ"/>
+                        <segue destination="p6H-gh-pOT" kind="show" identifier="segueTabbar" id="5hM-sg-s3A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,7 +135,52 @@
             </objects>
             <point key="canvasLocation" x="1337.68115942029" y="876.5625"/>
         </scene>
-        <!--Add View Controller-->
+        <!--Second-->
+        <scene sceneID="EfS-P1-frf">
+            <objects>
+                <viewController id="qkV-qG-vCC" customClass="SecondViewController" customModule="Practica" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Second" id="5Cm-Sv-O74"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWO-l7-mky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3100" y="1204"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="g27-ea-vgw">
+            <objects>
+                <viewController id="FyD-NJ-EQZ" customClass="FirstViewController" customModule="Practica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LVm-rD-OKC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IzF-Uv-pWf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" id="YUN-Kk-WOB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRv-Ot-1oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3100" y="556"/>
+        </scene>
+        <!--Tab Bar Test View Controller-->
+        <scene sceneID="0Sm-3D-Skb">
+            <objects>
+                <tabBarController id="p6H-gh-pOT" customClass="TabBarTestViewController" customModule="Practica" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qjf-d2-xdx"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v4m-so-QLn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FyD-NJ-EQZ" kind="relationship" relationship="viewControllers" id="1Sq-QK-Ofh"/>
+                        <segue destination="qkV-qG-vCC" kind="relationship" relationship="viewControllers" id="v1u-F0-biE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ftq-aq-FeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="877"/>
+        </scene>
+        <!-- -->
         <scene sceneID="nwv-ji-pi2">
             <objects>
                 <viewController id="hRO-d2-31q" customClass="AddViewController" customModule="Practica" customModuleProvider="target" sceneMemberID="viewController">
@@ -220,7 +267,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rUf-n7-LF3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hy0-Fp-as1"/>
+                    <navigationItem key="navigationItem" title=" " id="Hy0-Fp-as1">
+                        <barButtonItem key="backBarButtonItem" title=" " id="nwz-zK-qVP"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="anioTextField" destination="Pf6-Nx-zb2" id="9ZO-mF-eyr"/>
                         <outlet property="favoritoButton" destination="apU-mJ-Yro" id="c1p-95-V7F"/>
@@ -239,7 +288,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eQI-fW-ygB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z5z-pS-ZqI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="z5z-pS-ZqI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2470588235" green="0.76078431369999999" blue="0.51372549020000002" alpha="0.92492508559999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -255,6 +304,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="24" height="24"/>
         <image name="unfavorite" width="24" height="24"/>
     </resources>
 </document>

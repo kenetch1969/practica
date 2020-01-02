@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let apareance = UINavigationBar.appearance()
         apareance.barTintColor = .green
+
         
         return true
     }

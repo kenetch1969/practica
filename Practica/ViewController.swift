@@ -31,8 +31,10 @@ class ViewController: UIViewController {
             network.URLSessionGet()
         case 1:
             network.URLSessionPost()
-        default:
+        case 2:
             network.URLSessionPostParameter()
+        default:
+            performSegue(withIdentifier: "segueTabbar", sender: self)
         }
     }
     

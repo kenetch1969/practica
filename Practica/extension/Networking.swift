@@ -5,7 +5,8 @@
 //  Created by Juan Gerardo Cruz on 12/2/19.
 //  Copyright © 2019 Juan Gerardo Cruz. All rights reserved.
 //
-
+// Uso de alerttas
+// https://iosexample.com/advanced-usage-of-uialertcontroller-and-pickers/
 import Foundation
 
 struct Posts: Codable {
